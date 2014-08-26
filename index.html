@@ -4,18 +4,24 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>DIGTOUR</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
-		<!-- font-family: 'PT Sans Caption', sans-serif; -->
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-		<!-- font-family: 'PT Sans', sans-serif; -->
+		<link rel="stylesheet" href="css/vendor/jquery.fancybox.css">
+		<link rel="stylesheet" href="css/vendor/jquery.fancybox-thumbs.css">
 		<link rel="stylesheet" href="css/vendor/pictonic.css">
 		<link rel='stylesheet' href='css/vendor/normalize.css' type='text/css'>
-		<link rel="stylesheet" href="css/vendor/jquery.bxslider.css">	
+		<link rel="stylesheet" href="css/vendor/jquery.bxslider.css">
+		<link rel="icon" href="images/1.png" type="image/x-icon">	
+
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 				
 		<script src="js/vendor/jquery-2.1.0.min.js"></script>
 		<script src="js/vendor/jquery.bxslider.min.js"></script>
+		<script src="js/vendor/jquery.fancybox.pack.js"></script>
+		<script src="js/vendor/jquery.fancybox-thumbs.js"></script>
+
 		<script src="js/bxslider_foto.js"></script>
 		<script src="js/bxslider_feedback.js"></script>
+		<script src="js/fancybox_gallery.js"></script>
 		<script src="js/dt_click.js"></script>
 		<script src="js/menu.js"></script>
 	</head>
@@ -32,7 +38,7 @@
 					<li><a href="#about">ОБ ЭКСКУРСИЯХ</a></li>
 					<li><a href="#feedback">ОТЗЫВЫ</a></li>
 					<li><a href="#sign-up">ЗАПИСАТЬСЯ</a></li>
-					<li><a href="#">КОНТАКТЫ</a></li>
+					<li><a href="#footer">КОНТАКТЫ</a></li>
 				</ul>
 			</nav>
 			<a href="#menu" class="up">
@@ -54,16 +60,16 @@
 	<div class="main">
 		<!-- ============ЧТО ЭТО?============= -->
 
-		<div class="wrapper tunnel">
+		<section class="wrapper tunnel">
 			<div class="container ">
 				<h1>Экстремальные экскурсии <span>по тоннелям</span></h1>
 				<div class="overlay">
 					<p class="lead">Узнай все о скрытой стороне города!</p>
 					<p>Бомбоубежища. Коллекторы теплотрасс. Подземные речки. Шахты. Говностоки. Метро.</p>
 				</div>
-				<a href="#" class="button button-yellow">Хочу записаться!</a>
+				<a href="#sign-up" class="button button-yellow">Хочу записаться!</a>
 			</div>
-		</div>
+		</section>
 		<!-- ============/что это?============= -->
 		<div class="tape">
 		</div>
@@ -102,7 +108,7 @@
 				<div class="row pref-content">
 					<div class="column three-fifth">
 						<p>
-							Во время маршрута диггер-экскурсовод рассказывает о <span>подземном Петрбурге</span>, об особенностях подземных коммуникаций мегаполисов, о специфике диггерских исследований.
+							Во время маршрута диггер-экскурсовод рассказывает о <span>подземном Петербурге</span>, об особенностях подземных коммуникаций мегаполисов, о специфике диггерских исследований.
 						</p>
 						<p>
 							Вся прогулка совершается против течения, на пути встречаются водопады и различные препятствия. Хороший вариант для тех, кто за короткое время хочет познакомиться с <span>миром диггеров</span> тет-а-тет.
@@ -136,10 +142,10 @@
 		<!-- ============/описание============= -->
 
 		<!-- ============УВЛЕКАТЕЛЬНОЕ МЕТРО============= -->
-		<div class="wrapper bright">
+		<section class="wrapper bright">
 			<div class="container engrossing">
 				<div class="column two-fifth">
-					<iframe width="560" height="315" src="//www.youtube.com/embed/FKkejo2dMV4" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/FKkejo2dMV4" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="column three-fifth pull-right">
 					<h2>Никогда еще метро не было таким <span>увлекательным</span></h2>
@@ -151,20 +157,32 @@
 						двадцать первом веке подземные города, в основном, техногенные, но это не значит, 
 						что под землёй не осталось места истории.
 					</p>
-					<a href="" class="button button-yellow">Хочу пойти!</a>
+					<a href="#sign-up" class="button button-yellow">Хочу пойти!</a>
 				</div>
 			</div>
 			<!-- ============КАРУСЕЛЬ C ФОТО============= -->
-			<div class="container foto">
+			<section class="container foto">
 				<h2 class="foto-title">фотографии с наших экскурсий</h2>
 				<div class="slider1">
-					<div class="slide"><img src="images/photo1.jpg"></div>
-					<div class="slide"><img src="images/photo2.jpg"></div>
-					<div class="slide"><img src="images/photo3.jpg"></div>
+					<div class="slide">
+						<a class="fancybox" rel="group" href="images/photo1.jpg" title="Олечка после первого похода">
+							<img alt="ship" src="images/photo1.jpg">
+						</a>
+					</div>
+					<div class="slide">
+						<a class="fancybox" rel="group" href="images/photo2.jpg" title="Куралесим :-)">
+							<img alt="ship" src="images/photo2.jpg">
+						</a>
+					</div>
+					<div class="slide">
+						<a class="fancybox" rel="group" href="images/photo3.jpg" title="Вовка отличный фотограф">
+							<img alt="ship" src="images/photo3.jpg">
+						</a>
+					</div>
 				</div>
-			</div>
+			</section>
 			<!-- ============/карусель с фото============= -->
-		</div>
+		</section>
 		<!-- ============/увлекательное метро============= -->
 
 		<!-- ============ПРЕИМУЩЕСТВА============= -->
@@ -175,7 +193,7 @@
 						<img src="images/light.png" alt="">
 						<h3>НОВЫЕ ВПЕЧАТЛЕНИЯ</h3>
 						<p>
-							Немало тайн и загадок хранит в себе Питерская подземка.  Любые типы объектов чрезвычайно интересны. Куда течет  вода, уходящая в темное жерло портала? Что находитс я за развилкой кабельника? Есть ли еще один ярус в батарее форта?
+							Немало тайн и загадок хранит в себе Питерская подземка.  Любые типы объектов чрезвычайно интересны. Куда течет  вода, уходящая в темное жерло портала? Что находится за развилкой кабельника? Есть ли еще один ярус в батарее форта?
 						</p>
 					</li>
 					<li class="relative">
@@ -189,14 +207,14 @@
 						<img src="images/eye.png" alt="">
 						<h3>НОВЫЙ ВЗГЛЯД НА МЕТРО</h3>
 						<p>
-							Немало тайн и загадок хранит в себе Питерская подземка.  Любые типы объектов чрезвычайно интересны. Куда течет  вода, уходящая в темное жерло портала? Что находитс я за развилкой кабельника? Есть ли еще один ярус в батарее форта?
+							Немало тайн и загадок хранит в себе Питерская подземка.  Любые типы объектов чрезвычайно интересны. Куда течет  вода, уходящая в темное жерло портала? Что находится за развилкой кабельника? Есть ли еще один ярус в батарее форта?
 						</p>
 					</li>
 					<li class="relative">
 						<img src="images/workers.png" alt="">
 						<h3>НОВЫЕ ДРУЗЬЯ</h3>
 						<p>
-							Немало тайн и загадок хранит в себе Питерская подземка.  Любые типы объектов чрезвычайно интересны. Куда течет  вода, уходящая в темное жерло портала? Что находитс я за развилкой кабельника? Есть ли еще один ярус в батарее форта?
+							Немало тайн и загадок хранит в себе Питерская подземка.  Любые типы объектов чрезвычайно интересны. Куда течет  вода, уходящая в темное жерло портала? Что находится за развилкой кабельника? Есть ли еще один ярус в батарее форта?
 						</p>
 					</li>
 				</ul>
@@ -204,7 +222,7 @@
 		</div>
 		<!-- ============/преимущества============= -->
 		<!-- ============ОТЗЫВЫ============= -->
-		<div class="wrapper bright">
+		<section class="wrapper bright">
 			<div class="container">
 				<div id="feedback">
 					<h1>ОТЗЫВЫ</h1>
@@ -220,7 +238,7 @@
 					  <li>
 					  	<blockquote>
 					  		<span class="left-quotes">“</span>
-					  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste cum adipisci sapiente, vel dolor nemo!</p>
+					  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab earum soluta eaque consequuntur, maiores debitis animi, reprehenderit dicta ipsa! Magni nesciunt ipsam consectetur amet cum.</p>
 					  		<span class="right-quotes">”</span>
 							<p class="autor">Lorem ipsum dolor</p>
 						</blockquote>
@@ -235,10 +253,10 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- ============/отзывы============= -->
 		<!-- ============ВОПРОС-ОТВЕТ============= -->
-		<div class="wrapper dark" id="sign-up">
+		<section class="wrapper dark" id="sign-up">
 			<div class="container row">
 				<div class="column three-fifth">
 					<h2>Как записаться?</h2>
@@ -273,7 +291,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- ============/вопрос-ответ============= -->
 	
 	<!-- ============/содержание============= -->
@@ -282,18 +300,19 @@
 	</div>
     
     <!-- ============ПОДВАЛ============= -->
-	<footer>
+	<footer id="footer">
 		<div class="container social-icon">
-			<span class="icon-facebook"></span>
-			<span class="icon-twitter-3"></span>
-			<span class="icon-vimeo"></span>
-			<span class="icon-picasa"></span>
+			<a href="https://github.com/nukkunaana" target="_blank">
+				<span class="icon-facebook"></span>
+				<span class="icon-twitter-3"></span>
+				<span class="icon-vimeo"></span>
+				<span class="icon-picasa"></span>
+			</a>
 		</div>
 		<p>
 			<a href="#" class="logo-footer">
 				<span class="dig">DIG</span><span>TOUR</span><span class="year"> 2014</span>
 			</a>
-
 		</p>
 	</footer>
 	<!-- ============/подвал============= -->

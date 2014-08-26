@@ -1,13 +1,15 @@
 /*------снипеты-----*/
-
 .column	{
 	float: left;
 }
 
-.pull-left {float: left;}
+.pull-left {
+	float: left;
+}
 
 .pull-right {
-	float: right;}
+	float: right;
+}
 
 * {
 	-webkit-box-sizing: border-box;
@@ -28,14 +30,54 @@
 	overflow: hidden;
 	font-family: 'PT Sans';
 }
+/*-------*/
+
+
+/*-----------Изменение пути к папке со спрайтом (фенсибокс)-----------*/
+
+ #fancybox-loading,.fancybox-overlay  .fancybox-close, .fancybox-overlay .fancybox-prev span, .fancybox-overlay  .fancybox-next span {
+	background-image: url(../images/vendor/fancyBox/fancybox_sprite.png);
+}
+
+ #fancybox-loading div {
+	background: url(../images/vendor/fancyBox/fancybox_loading.gif) center center no-repeat;
+}
+
+ .fancybox-nav {
+	background: transparent url(../images/vendor/fancyBox/blank.gif); /* helps IE */
+}
+
+.fancybox-overlay {
+	background: url(../images/vendor/fancyBox/fancybox_overlay.png);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5){
+
+	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+		background-image: url(../images/vendor/fancyBox/fancybox_sprite@2x.png);
+	}
+
+	.fancybox-loading div {
+		background-image: url(../images/vendor/fancyBox/fancybox_loading@2x.gif);
+	}
+}
+/*----------/изменение пути к папке со спрайтом (фенсибокс)-----------*/
+
+
+
+
 
 /*******************************************************************
 LAYOUT
 *******************************************************************/
 
+
 /*=========Шапка==========*/
 
-header{
+header {
 	text-align: right;	
 	padding: 16px 0;
 }
@@ -52,7 +94,7 @@ header .phone {
 	vertical-align: top;
 }
 
-.up{
+.up {
 	position: fixed;
 	right: 2%;
 	bottom: 22px;
@@ -87,7 +129,7 @@ header nav {
 	font-size: 0;
 }
 
-header ul li	{
+header ul li {
 	display: inline-block;
 	margin: 14px 16px 0 0;
 }
@@ -107,6 +149,7 @@ header nav li a:hover {
 	color: #fff;
 }
 /*------/главное меню------*/
+
 /*------телефоны------*/
 .phone {
 	margin-top: 14px;
@@ -114,9 +157,8 @@ header nav li a:hover {
 	font-size: 5;
 }
 
-.phone span{
+.phone span {
 	display: block;
-	/*font-size: 13px;*/
 }
 
 .phone span:first-child { 
@@ -142,7 +184,6 @@ header nav li a:hover {
 }
 
 /*======ЧТО ЭТО?======*/
-
 .tunnel	{
 	height: 500px;
 	min-height: 500px;
@@ -179,7 +220,7 @@ header nav li a:hover {
 	line-height: 32px;
 }
 
-.overlay .lead{ 
+.overlay .lead { 
 	font-size: 30px;
 	font-weight: bold;
 } 
@@ -210,7 +251,7 @@ header nav li a:hover {
 .button:hover,
 .button-yellow:hover,
 .engrossing .button:hover,
-.social-icon span:hover{
+.social-icon span:hover {
 	background: #000;
 	color: #fff;
 }
@@ -244,7 +285,7 @@ header nav li a:hover {
 	margin-bottom: 23px;
 }
 
-.fifth p{
+.fifth p {
 	font-size: 24px;
 	text-align: center; 
 }
@@ -265,11 +306,11 @@ header nav li a:hover {
 	font-weight: bold;
 }
 
-.three-fifth{
+.three-fifth {
 	width: 59%;
 } 
 
-.pref-content .three-fifth p{
+.pref-content .three-fifth p {
 	font-size: 18px;
 	font-style: normal;
 	margin-bottom: 15px;
@@ -302,7 +343,7 @@ header nav li a:hover {
 	font-weight: 100;
 }
 
-.pref-content .two-fifth p{
+.pref-content .two-fifth p {
 	font-size: 18px;
 	line-height: 18px;
 }
@@ -327,12 +368,12 @@ header nav li a:hover {
 	margin-left: 0;
 } 
 
-.engrossing .two-fifth iframe{
+.engrossing .two-fifth iframe {
 	width: 100%;
 	height: 275px;
 }
 
-.engrossing .three-fifth{
+.engrossing .three-fifth {
 	margin-left: 1%;
 }
 
@@ -368,7 +409,7 @@ header nav li a:hover {
 	padding: 18px 0 91px;
 }
 
-.foto-title{
+.foto-title {
 	color: #feb000;
 	text-transform: uppercase;
 	text-align: center;
@@ -390,6 +431,7 @@ header nav li a:hover {
 	margin-top: -32px;
 	height: 54px;
 	width: 54px;
+	z-index: 9;
 }
 
 .bx-wrapper .bx-prev {
@@ -414,7 +456,7 @@ header nav li a:hover {
 }
 
 .bx-viewport .slider1 .slide,
-.bx-viewport .slider1 .bx-clone{
+.bx-viewport .slider1 .bx-clone {
 	width: auto!important;
 	margin-right: 25px!important;
 }
@@ -458,12 +500,12 @@ header nav li a:hover {
 	right: 0px;
 }
 
-.prefs li:nth-child(3) img  {
+.prefs li:nth-child(3) img {
 	top: 9px;
 	right: -14px;
 }
 
-.prefs li:nth-child(2n){ 
+.prefs li:nth-child(2n) { 
 	text-align: left;
 	padding-left: 92px;
 	padding-right: 0;
@@ -518,19 +560,19 @@ header nav li a:hover {
 	padding: 0 8%;
 }
 
-.left-quotes{
+.left-quotes {
 	top: 0;
 	left: 0;
 	line-height: 129px;
 }
 
-.right-quotes{
+.right-quotes {
 	bottom: 0;
 	right: 0;
 	line-height: 32px;
 }
 
- #feedback blockquote p{
+ #feedback blockquote p {
 	font-size: 20px;
 
 	line-height: 30px;
@@ -574,7 +616,7 @@ header nav li a:hover {
 
 /*=========ВОПРОС-ОТВЕТ========*/
 
-#sign-up{
+#sign-up {
 	min-height: 500px;
 	position: relative;
 	padding: 82px 0;
@@ -709,7 +751,7 @@ fieldset .use_promo {
 	background-color: #f1f2f6;
 }
 
-fieldset .use_promo:focus{
+fieldset .use_promo:focus {
 	outline: none;
 	color: #1906B9;
 	border-color: #1906B9;
@@ -725,7 +767,7 @@ footer {
 	font-size: 0;
 }
 
-.social-icon{
+.social-icon {
 	margin-bottom: 14px;
 }
 
@@ -748,11 +790,11 @@ footer {
 }
 
 
-.dig{
+.dig {
 	color: #fff;
 }
 
-.year{
+.year {
 	font-size: 14px;
 }
 
