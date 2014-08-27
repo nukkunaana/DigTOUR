@@ -12,6 +12,13 @@ DIGTOUR
 - появление ответа при клике на вопрос.
  
 #### Макет:
-
 <https://github.com/nukkunaana/DigTOUR/blob/master/digtour.png>
+![](http://oi59.tinypic.com/2rwqmph.jpg)
+***
 
+#### Скрины:
+##### Галерея
+![](http://oi58.tinypic.com/ngygzk.jpg)
+***
+##### Появление ответа, при клике на вопрос
+![](http://oi58.tinypic.com/2en4u1s.jpg)
